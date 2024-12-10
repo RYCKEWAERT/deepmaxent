@@ -15,7 +15,7 @@
 
 <div align="center">
   <img src="images/deepmaxent.png" alt="Project logo" width="300">
-  <h2 align="center">deepmaxent</h2>
+  <h2 align="center">DeepMaxent</h2>
   <p align="center">Deep learning methods in B-CUBED project</p>
   <a href="https://github.com/RYCKEWAERT/deepmaxent">View project</a>
   ·
