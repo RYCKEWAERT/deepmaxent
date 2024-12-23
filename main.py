@@ -23,7 +23,7 @@ class ConfigArgs:
 
         # Cross-validation step
         self.cv = True # True for cross-validation, False for final evaluation
-        self.lr_tested = [0.00002,0.0002,0.002] # Learning rate tested
+        self.lr_tested = [0.00001,0.0001,0.001] # Learning rate tested
         self.batch_tested = [10,250] # Batch size tested
         self.hidden_nbr_tested = [1,2,3] # Number of hidden layers tested
         self.w_tested=[1e-4,1e-3,1e-2] # Weight decay tested
@@ -34,12 +34,12 @@ class ConfigArgs:
         self.epoch_cv = 20 # Number of epochs for cross-validation
         
         # Final hyperparameter values
-        self.learning_rate = 0.0002
+        self.learning_rate = 0.0001
         self.epoch = 100
         self.hidden_size = 250
         self.batch_size = 250
         self.TGB = True # True for using the target group background correction
-        self.weight_decay = 1e-2 # 5e-4 if mean in deepmaxentloss
+        self.weight_decay = 3e-4 # 5e-4 if mean in deepmaxentloss
         self.hidden_nbr = 2
         self.loss_options = ["deepmaxent"] # "poisson", "deepmaxent", "bce", "ce"
 
