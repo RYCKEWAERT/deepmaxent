@@ -38,7 +38,7 @@ At this stage, the codes in this repository are still under active development. 
 Maxime RYCKEWAERT (Inria)
 
 ## About the project
-The B-CUBED (Biodiversity Big Data Cube) project is a European initiative aimed at standardising the way in which biodiversity data is stored. The main objective is to standardise biodiversity data to facilitate access, interoperability and use by researchers, policy-makers and the public.
+The B-CUBED (Biodiversity Big Data Cube) project is a European initiative aimed at standardising the way in which biodiversity data is stored. The main objective is to standardise biodiversity data to facilitate access, interoperability and use by researchers, policy-makers and the public. Please, visit this website: https://b-cubed.eu
 
 ## Deep-Learning algorithms for Species Distribution Modelling
 Deep learning models have become increasingly prominent in the field of species distribution modelling. These models are capable of processing vast amounts of biodiversity data, effectively capturing the intricate, non-linear relationships between various environmental factors and the presence or absence of species. 
@@ -59,7 +59,7 @@ This dataset is a typical biodiversity dataset from the B-CUBED project in Belgi
 This dataset consists of 19 bioclimatic rasters obtained from the WorldClim and CHELSA databases. The rasters represent various environmental factors such as temperature, precipitation, and altitude. 
 
 Karger, D.N., Conrad, O., Böhner, J., Kawohl, T., Kreft, H., Soria-Auza, R.W., Zimmermann, N.E., Linder, P., Kessler, M. (2017). Climatologies at high resolution for the Earth land surface areas. Scientific Data. 4 170122. https://doi.org/10.1038/sdata.2017.122
-The full dataset is available : https://chelsa-climate.org/bioclim/ 
+The full dataset is available: https://chelsa-climate.org/bioclim/ 
 
 ### A set from the National Centre for Ecological Analysis and Synthesis (NCEAS)
 
