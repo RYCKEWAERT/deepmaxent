@@ -13,7 +13,7 @@ class deepmaxent_loss(nn.Module):
     def __init__(self):
         super(deepmaxent_loss, self).__init__()
     def forward(self, input, target):
-        loss = -((target)*(input.log_softmax(0))).mean(0).sum()
+        loss = -((target)*(input.log_softmax(0))).mean(0).mean()
         return loss
 
 class bce_loss(nn.Module):
