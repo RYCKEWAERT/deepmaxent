@@ -1,7 +1,7 @@
 # Description: Main file to run DeepMaxent model on the Elith data
 #
 import warnings
-from librairies.train_models import cv_eval_deepmodel, eval_deepmodel
+from librairies.train_models_elith import cv_eval_deepmodel, eval_deepmodel
 from librairies.utils import set_seed, get_random_seed_list, make_results_directory
 import os
 
@@ -15,7 +15,7 @@ class ConfigArgs:
     def load_default_configuration(self):
         # General parameters
         self.outputdir = "results"
-        self.dirdata = "./data-Elith/"
+        self.dirdata = "./data/elith/"
         self.global_seed = 42  # the answer to life the universe and everything
         set_seed(self.global_seed)
         self.list_of_seed = get_random_seed_list(1000)
@@ -23,18 +23,18 @@ class ConfigArgs:
 
         # Cross-validation step
         self.cv = True # True for cross-validation, False for final evaluation
-        self.lr_tested = [0.00001,0.0001,0.001] # Learning rate tested
+        self.lr_tested = [0.00002,0.0002,0.002] # Learning rate tested
         self.batch_tested = [10,250] # Batch size tested
-        self.hidden_nbr_tested = [1,2,3] # Number of hidden layers tested
-        self.w_tested=[1e-4,1e-3,1e-2] # Weight decay tested
+        self.hidden_nbr_tested = [1,2] # Number of hidden layers tested
+        self.w_tested=[3e-4,3e-3] # Weight decay tested
         self.num_cv_blocks = (5, 5) # Number of blocks for cross-validation
         self.validation_size = 0.1 # Size of the validation set
         self.cross_validation = "blocked" # "blocked" or "random" or "stratified"
         self.validation_criteria = "AUC" # "AUC" or "loss"
-        self.epoch_cv = 20 # Number of epochs for cross-validation
+        self.epoch_cv = 50 # Number of epochs for cross-validation
         
         # Final hyperparameter values
-        self.learning_rate = 0.0001
+        self.learning_rate = 0.0002
         self.epoch = 100
         self.hidden_size = 250
         self.batch_size = 250

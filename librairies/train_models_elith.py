@@ -47,9 +47,9 @@ def cv_eval_deepmodel(args):
     for r in args.regions:
         n += 1
 
-        dossier_path = args.dirdata + "/data/Environment/" + r
-        borders = gpd.read_file(args.dirdata + "/data/Borders/" + r.lower() + ".gpkg")
-        trainPOfile = args.dirdata + "/data/Records/train_po/" + r + "train_po.csv"
+        dossier_path = args.dirdata + "/Environment/" + r
+        borders = gpd.read_file(args.dirdata + "/Borders/" + r.lower() + ".gpkg")
+        trainPOfile = args.dirdata + "/Records/train_po/" + r + "train_po.csv"
 
         PO = pd.read_csv(trainPOfile)
         
