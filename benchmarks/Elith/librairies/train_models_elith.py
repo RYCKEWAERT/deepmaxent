@@ -495,6 +495,10 @@ def eval_deepmodel(args):
                     }, full_path)   
                     
                     
+                    loss = results['loss_by_epoch']
+                    
+                    loss_df = pd.DataFrame({"loss": loss})
+                    loss_df.to_csv(f"{args.outputdir}/curves/loss_{r}_{group}_{loss_option}_{args.list_of_seed[idx_seed]}.csv", index=False)
                     
                     with torch.no_grad():
                         predictions = model(X_PA_tensor)
@@ -738,6 +742,7 @@ def train_deepmodel(
         
         # wandb.log({"epoch": epoch,
         #             "total_loss": total_loss_train / len(train_loader)})
+        # loss_by_batch.append(total_loss_train / len(train_loader))
         
         if total_loss_train / len(train_loader) < best_loss:
             best_loss = total_loss_train / len(train_loader)
@@ -748,6 +753,7 @@ def train_deepmodel(
     result = {
         "predictions": predictions,
         "model": model,
+        "loss_by_epoch": loss_by_batch
     }
     return result
     
