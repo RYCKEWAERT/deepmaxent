@@ -101,5 +101,6 @@ Presence-only and presence-absence data from six regions (Elith et al., 2020).
 
 ### GeoPlant Dataset
 
+GeoPlant: Spatial Plant Species Prediction Dataset. 
 A curated dataset of plant species occurrences across Europe, integrated with environmental variables for species distribution modeling.
-> Picek, L. et al. (2025)
+> Picek, L. et al. (2025). [DOI: 10.52202/079017-4023](https://doi.org/10.52202/079017-4023)
