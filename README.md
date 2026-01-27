@@ -1,4 +1,4 @@
-# DeepMaxent - A neural networks using maximum entropy principle for Species Distribution Modelling
+# DeepMaxent
 
 <a name="readme-top"></a>
 
@@ -12,9 +12,8 @@
   <a href="https://github.com/RYCKEWAERT/deepmaxent/watchers"><img src="https://img.shields.io/github/watchers/RYCKEWAERT/deepmaxent" alt="GitHub watchers"></a>
 </p>
 
-
 <div align="center">
-  <img src="images/deepmaxent.png" alt="Project logo" width="300">
+  <img src="images/deepmaxent01.png" alt="Project logo" width="300">
   <h2 align="center">DeepMaxent</h2>
   <p align="center">A neural networks using maximum entropy principle for Species Distribution Modelling developped in B-CUBED project</p>
   <a href="https://github.com/RYCKEWAERT/deepmaxent">View project</a>
@@ -22,47 +21,85 @@
   <a href="https://github.com/RYCKEWAERT/deepmaxent/issues">Report Bug</a>
   ·
   <a href="https://github.com/RYCKEWAERT/deepmaxent/issues">Request Feature</a>
-  <h1></h1>
 </div>
 
+---
 
 
-## Objective
-This repository aims to document the development and advancements of the DeepMaxent algorithm for species distribution modelling as part of the B-CUBED project: https://b-cubed.eu
+## Overview
 
-## An important note
-At this stage, the codes in this repository are still under active development. As the project progresses, all the codes will be properly documented and referenced in this section. Additionally, a paper comparing the different results obtained from these codes is submitted. Stay tuned for updates and further advancements in the development of the project.
+**DeepMaxent** is a deep learning algorithm for Species Distribution Modelling (SDM) designed for presence-only data. It combines the maximum entropy principle with neural networks to capture complex, non-linear relationships between species presence and environmental factors.
+
+This approach is particularly suited for handling large-scale biodiversity datasets, enabling researchers to better understand and conserve biodiversity in the face of environmental changes.
+
+## ✨ Key Features
+
+- Deep learning-based SDM using maximum entropy loss
+- Handles presence-only biodiversity data
+- Captures non-linear species-environment relationships
+- Scalable to large datasets
+
+## 🚀 Getting Started
+
+### Tutorial: Costa Rica Plantae 🇨🇷🌿
+
+A comprehensive Jupyter notebook tutorial is available: **[tutorial_deepmaxent.ipynb](tutorial_deepmaxent.ipynb)**
+
+This hands-on tutorial guides you through:
+1. Loading and exploring biodiversity occurrence data from GBIF
+2. Visualizing species occurrences on interactive maps
+3. Processing environmental rasters (WorldClim bioclimatic variables)
+4. Preparing training data by aggregating occurrences at raster resolution
+5. Building input tensors for the DeepMaxent model
+
+The tutorial uses plant species observations from **Costa Rica** as a case study.
+
+### Tutorial: main_example.py 
+Another example script is available: **[main_example.py](main_example.py)**
+This script demonstrates how to set up and run the DeepMaxent model using python code instead of notebook. It includes data preprocessing, model training, and evaluation steps.
 
 
-## Author
-Maxime RYCKEWAERT (Inria)
+## 👤 Author
 
-## About the project
-The B-CUBED (Biodiversity Big Data Cube) project is a European initiative aimed at standardising the way in which biodiversity data is stored. The main objective is to standardise biodiversity data to facilitate access, interoperability and use by researchers, policy-makers and the public. Please, visit this website: https://b-cubed.eu
+**Maxime RYCKEWAERT** (Cirad)
 
-## Deep-Learning algorithms for Species Distribution Modelling
-Deep learning models have become increasingly prominent in the field of species distribution modelling. These models are capable of processing vast amounts of biodiversity data, effectively capturing the intricate, non-linear relationships between various environmental factors and the presence or absence of species. 
+## 📄 Citation
+
+If you use this code, please cite the following paper:
+
+> *Paper reference coming soon*
+
+## 🔬 About the B-CUBED Project
+
+The [B-CUBED (Biodiversity Building Blocks for Policy)](https://b-cubed.eu) project is a European initiative aimed at standardising biodiversity data storage. Its main objective is to facilitate access, interoperability and use by researchers, policy-makers and the public.
+
+## ⚠️ Note
+
+This repository is under active development. Codes will be progressively documented and a comparative paper is in preparation.
+
+--- 
 
 
-## Datasets
+## 📊 Datasets
 
-### A use case (Belgium, 2010) for species classification using B-CUBED data 
+### Belgium (2010) - B-CUBED Use Case
+
+**Biodiversity Data**: A subset from 2010, organized into spatial cubes for detailed biodiversity analysis.
+- [GBIF Download](https://www.gbif.org/occurrence/download/0096919-240321170329656)
+- [DOI: 10.15468/dl.e3j5kv](https://doi.org/10.15468/dl.e3j5kv)
+
+**Bioclimatic Rasters**: 19 variables from WorldClim/CHELSA databases (temperature, precipitation, altitude, etc.)
+- Karger, D.N. et al. (2017). Climatologies at high resolution for the Earth land surface areas. *Scientific Data*, 4, 170122. [DOI: 10.1038/sdata.2017.122](https://doi.org/10.1038/sdata.2017.122)
+- [CHELSA Bioclim Dataset](https://chelsa-climate.org/bioclim/)
+
+### NCEAS Benchmark Dataset
+
+Presence-only and presence-absence data from six regions (Elith et al., 2020).
+
+> Elith, J. et al. (2020). Presence-only and Presence-absence Data for Comparing Species Distribution Modeling Methods. *Biodiversity Informatics*, 15(2). [DOI: 10.17161/bi.v15i2.13384](https://doi.org/10.17161/bi.v15i2.13384)
 
 
-#### Biodiversity Data
-This dataset is a typical biodiversity dataset from the B-CUBED project in Belgium. It represents a subset from the year 2010, extracted from a more comprehensive dataset. The data is organized into spatial cubes to facilitate detailed biodiversity analysis for that year. For more information and access to the full dataset, please refer to the following resources: 
-- https://www.gbif.org/occurrence/download/0096919-240321170329656
-- https://doi.org/10.15468/dl.e3j5kv.
+### GeoPlant Dataset
 
-#### Bioclimatic Rasters 
-
-This dataset consists of 19 bioclimatic rasters obtained from the WorldClim and CHELSA databases. The rasters represent various environmental factors such as temperature, precipitation, and altitude. 
-
-Karger, D.N., Conrad, O., Böhner, J., Kawohl, T., Kreft, H., Soria-Auza, R.W., Zimmermann, N.E., Linder, P., Kessler, M. (2017). Climatologies at high resolution for the Earth land surface areas. Scientific Data. 4 170122. https://doi.org/10.1038/sdata.2017.122
-The full dataset is available: https://chelsa-climate.org/bioclim/ 
-
-### A set from the National Centre for Ecological Analysis and Synthesis (NCEAS)
-
-This dataset is from the openly released recently (Elith et al., 2020), this subset includes presence-only and presence-absence data from six different regions. more details in Elith et al., 2020. If you use this dataset, please cite Elith et al., 2020. 
-
-Elith, J., Graham, C., Valavi, R., Abegg, M., Bruce, C., Ford, A., Guisan, A., Hijmans, R. J., Huettmann, F., Lohmann, L., Loiselle, B., Moritz, C., Overton, J., Peterson, A. T., Phillips, S., Richardson, K., Williams, S., Wiser, S. K., Wohlgemuth, T., & Zimmermann, N. E. (2020). Presence-only and Presence-absence Data for Comparing Species Distribution Modeling Methods. Biodiversity Informatics, 15(2), Article 2. https://doi.org/10.17161/bi.v15i2.13384
+A curated dataset of plant species occurrences across Europe, integrated with environmental variables for species distribution modeling.
+> Picek, L. et al. (2025)
