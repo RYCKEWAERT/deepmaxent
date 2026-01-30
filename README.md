@@ -53,6 +53,10 @@ This hands-on tutorial guides you through:
 5. Building input tensors for the DeepMaxent model
 
 The tutorial uses plant species observations from **Costa Rica** as a case study.
+> GBIF data - [DOI: 10.15468/dl.434enu](https://doi.org/10.15468/dl.434enu)
+> Chelsa dataset - [CHELSA Bioclim Dataset](https://chelsa-climate.org/bioclim/)
+
+
 
 ### Tutorial: main_example.py 
 Another example script is available: **[main_example.py](main_example.py)**
@@ -88,7 +92,7 @@ This repository is under active development. Codes will be progressively documen
 - [GBIF Download](https://www.gbif.org/occurrence/download/0096919-240321170329656)
 - [DOI: 10.15468/dl.e3j5kv](https://doi.org/10.15468/dl.e3j5kv)
 
-**Bioclimatic Rasters**: 19 variables from WorldClim/CHELSA databases (temperature, precipitation, altitude, etc.)
+**Bioclimatic Rasters**: 19 variables from CHELSA databases (temperature, precipitation, altitude, etc.)
 - Karger, D.N. et al. (2017). Climatologies at high resolution for the Earth land surface areas. *Scientific Data*, 4, 170122. [DOI: 10.1038/sdata.2017.122](https://doi.org/10.1038/sdata.2017.122)
 - [CHELSA Bioclim Dataset](https://chelsa-climate.org/bioclim/)
 
@@ -103,4 +107,5 @@ Presence-only and presence-absence data from six regions (Elith et al., 2020).
 
 GeoPlant: Spatial Plant Species Prediction Dataset. 
 A curated dataset of plant species occurrences across Europe, integrated with environmental variables for species distribution modeling.
+
 > Picek, L. et al. (2025). [DOI: 10.52202/079017-4023](https://doi.org/10.52202/079017-4023)
